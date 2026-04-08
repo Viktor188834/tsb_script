@@ -205,7 +205,8 @@ page3.Slide({
 				print(targetResult)
 				LockOnBillboard.Adornee = targetResult
 				local cam = workspace.CurrentCamera
-				cam.CFrame = CFrame.new(cam.Position, targetResult.Position)
+				cam.CFrame = CFrame.new(cam.CFrame.Position, targetResult.Position)
+				game:GetService("RunService").Heartbeat:Wait()
 			until lock_on == false
 		end
 	end
